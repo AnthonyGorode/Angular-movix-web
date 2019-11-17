@@ -1,0 +1,13 @@
+<ngx-slick-carousel 
+    class="carousel" 
+    #slickModal="slick-carousel" 
+    [config]="slideConfig" 
+    (init)="slickInit($event)"
+    (breakpoint)="breakpoint($event)"
+    (afterChange)="afterChange($event)"
+    (beforeChange)="beforeChange($event)"
+>
+    <div ngxSlickItem *ngFor="let slide of slides" class="slide">
+        <img src="https://image.tmdb.org/t/p/w500/{{ slide.poster_path }}" alt="" width="100%" height="300px" />
+    </div>
+</ngx-slick-carousel>
